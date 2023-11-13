@@ -1,0 +1,18 @@
+.zapatilla {
+    background-color: #fff;
+    margin: 20px 1%;
+    text-align: center;
+    width: 31%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.zapatilla p {
+    color: var(--color-negro-fondo);
+    margin-top: 10px;
+}
+
+.zapatilla img {
+    max-width: 100%;
+    height: auto;
+}
