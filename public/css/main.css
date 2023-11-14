@@ -125,8 +125,8 @@ p, li, button, label, option {
 }
 
 @font-face {
-  font-family: "Anton";
-  src: url("../fonts/Anton/Anton-Regular.ttf");
+  font-family: "AlegreyaSans";
+  src: url("../fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf");
 }
 @font-face {
   font-family: "Open Sans";
@@ -136,7 +136,7 @@ p, li, button, label, option {
   --color-dorado: #ffc600;
   --color-negro-fondo: #333;
   --color-blanco-oscuro: #f5f5f5;
-  --fuente-titulo: "Anton";
+  --fuente-titulo: "AlegreyaSans";
   --fuente-texto: "Open Sans";
 }
 
@@ -151,10 +151,10 @@ p, li, button, label, option {
 .animated-section-down-up {
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, transform 1s;
-  transition: opacity 1s, transform 1s, -webkit-transform 1s;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
 }
 
 .animated-section-down-up.visible {
@@ -165,10 +165,10 @@ p, li, button, label, option {
 .animated-section-right-left {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, transform 1s;
-  transition: opacity 1s, transform 1s, -webkit-transform 1s;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
 }
 
 .animated-section-right-left.visible {
@@ -179,10 +179,10 @@ p, li, button, label, option {
 .animated-section-left-right {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, transform 1s;
-  transition: opacity 1s, transform 1s, -webkit-transform 1s;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
 }
 
 .animated-section-left-right.visible {
@@ -239,6 +239,10 @@ header {
 
 header img {
   width: 100px;
+}
+
+.menu {
+  width: 50px;
 }
 
 #contenidor_rifes {
@@ -319,6 +323,144 @@ header img {
           justify-content: center;
 }
 
+@media (min-width: 1024px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .menu, header #aparecer {
+    display: none;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  header div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 40%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header #menu {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+@media (max-width: 1024px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header div {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav {
+    width: 100%;
+  }
+  header #menu {
+    display: none;
+  }
+  header #aparecer {
+    text-align: center;
+  }
+  header #aparecer li {
+    padding-top: 10px;
+  }
+  header #aparecer li:first-child {
+    padding-top: 0px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header div {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav {
+    width: 100%;
+  }
+  header #menu {
+    display: none;
+  }
+  header #aparecer {
+    text-align: center;
+  }
+  header #aparecer li {
+    padding-top: 10px;
+  }
+  header #aparecer li:first-child {
+    padding-top: 0px;
+  }
+}
 @media (min-width: 1024px) {
   #filtres_ordenar {
     display: grid;
