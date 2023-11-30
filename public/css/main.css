@@ -123,6 +123,14 @@ p, li, button, label, option {
   height: auto;
 }
 
+.card {
+  width: 31% !important;
+}
+
+#trobats {
+  gap: 20px;
+}
+
 @font-face {
   font-family: "AlegreyaSans";
   src: url("../fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf");
